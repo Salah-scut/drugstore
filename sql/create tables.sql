@@ -11,3 +11,8 @@ create table employees
 		primary key (employee_id)
 );
 
+drop table stores cascade;
+create table stores
+(
+    
+);
