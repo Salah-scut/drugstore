@@ -14,5 +14,6 @@ create table employees
 drop table stores cascade;
 create table stores
 (
-    
+    department_id,
+
 );
