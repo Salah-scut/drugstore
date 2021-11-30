@@ -1,4 +1,4 @@
-package com.thomsonxu.drugstore;
+package com.thomsonxu.drugstore.servlet;
 
 import java.io.*;
 import javax.servlet.http.*;
