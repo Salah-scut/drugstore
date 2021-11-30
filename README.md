@@ -3,14 +3,6 @@ A drugstore management system for the lesson
 
 
 
-# drugstore
-
-A drugstore management system for the lesson
-
-
-
-
-
 # 1	需求分析
 
 ### 用户
@@ -51,15 +43,15 @@ A drugstore management system for the lesson
 
 
 
-#### 门店表 （stores）
+#### 门店表 （departments）
 
-|          字段名          |  类型   | 长度 | 默认值 | 是否允许为空 |        KEY        |
-| :----------------------: | :-----: | :--: | :----: | :----------: | :---------------: |
-|  门店编号 department_id  |   int   |  \   |   \    |      否      |        PRI        |
-|  门店名 department_name  |   var   |  30  |   \    |      否      |                   |
-|  门店地址 manufacturer   | varchar |  50  |   \    |      否      |                   |
-| 店长员工编号 employee_id | varchar |  9   |   \    |      否      | foreign employees |
-|                          |         |      |        |              |                   |
+|         字段名          |  类型   | 长度 | 默认值 | 是否允许为空 |        KEY        |
+| :---------------------: | :-----: | :--: | :----: | :----------: | :---------------: |
+| 门店编号 department_id  |   int   |  \   |   \    |      否      |        PRI        |
+| 门店名 department_name  | varchar |  30  |   \    |      否      |                   |
+|    门店地址 address     | varchar |  50  |   \    |      否      |                   |
+| 店长员工编号 manager_id | varchar |  9   |   \    |      否      | foreign employees |
+|                         |         |      |        |              |                   |
 
 
 
@@ -74,6 +66,8 @@ A drugstore management system for the lesson
 |                       |         |      |        |              |      |
 
 
+
+(没时间可以不做：)
 
 #### 药品-门店表（drugs_stores）
 
