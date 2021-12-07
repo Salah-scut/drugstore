@@ -2,7 +2,7 @@ drop table employees;
 create table employees
 (
 	employee_id varchar(9),
-	employee_name int not null,
+	employee_name varchar(20) not null,
 	job_id int default 3 not null ,
 	email varchar(30) null,
 	department_id int null,

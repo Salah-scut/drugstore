@@ -13,7 +13,7 @@
 <style>div{text-align: center}</style>
 <body>
     <form action="LoginServlet" method="post" style="padding-top: -700px;">
-        <div>账户（员工编号）：<input type="text" name="name" value=""><br><br></div>
+        <div>账户（员工编号）：<input type="text" name="employee_id" value=""><br><br></div>
         <div>密码：<input type="password" name="password" value=""><br><br></div>
         <div>
             <input type="submit" value="登录" name="login">&nbsp;&nbsp;&nbsp;
