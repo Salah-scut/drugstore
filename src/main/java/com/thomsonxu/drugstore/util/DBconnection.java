@@ -53,4 +53,15 @@ public class DBconnection {
         }
         return resultSet;
     }
+
+    public static ResultSet selectDrugs() {
+        try {
+            statement = connection.prepareStatement("select * from drugs where 1 = ?");
+            statement.setString(1,"1");
+            resultSet = statement.executeQuery();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return resultSet;
+    }
 }

@@ -20,7 +20,9 @@ public class LoginServiceImpl implements LoginService {
                     employee = new Employee(resultSet.getString("employee_id"),
                             resultSet.getString("employee_name"),
                             resultSet.getString("password"),
-                            resultSet.getString("email"));
+                            resultSet.getString("email"),
+                            resultSet.getInt("job_id"),
+                            resultSet.getInt("department_id"));
                 }
             }
         catch (SQLException sqlException) {

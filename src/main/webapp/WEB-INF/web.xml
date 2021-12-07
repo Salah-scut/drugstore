@@ -16,12 +16,21 @@
     <servlet><!--servlet类路径配置-->
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.thomsonxu.drugstore.servlet.LoginServlet</servlet-class>
+    </servlet>
 
+    <servlet><!--servlet类路径配置-->
+        <servlet-name>ShowDrugServlet</servlet-name>
+        <servlet-class>com.thomsonxu.drugstore.servlet.ShowDrugServlet</servlet-class>
     </servlet>
 
     <servlet-mapping><!--servlet类映射配置-->
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping><!--servlet类映射配置-->
+        <servlet-name>ShowDrugServlet</servlet-name>
+        <url-pattern>/ShowDrugServlet</url-pattern>
 
     </servlet-mapping>
 

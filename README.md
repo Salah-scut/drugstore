@@ -105,3 +105,21 @@ A drugstore management system for the lesson
 
 
 
+
+
+# 3	逻辑跳转
+
+
+
+
+
+login.jsp -> loginServlet -> main(1/2/3).jsp
+
+
+
+
+
+
+
+
+

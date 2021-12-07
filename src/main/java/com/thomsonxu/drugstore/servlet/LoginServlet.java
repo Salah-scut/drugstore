@@ -24,8 +24,11 @@ public class LoginServlet extends HttpServlet {
         Employee employee = loginService.login(employee_id,password);
         if (employee != null) {
             req.setAttribute("employee",employee);
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+            req.setAttribute("employee_name",employee.getEmployee_name());
+            // 重定向到对应职务的页面
+            req.getRequestDispatcher(String.format("/main%d.jsp", employee.getJob_id())).forward(req,resp);
         } else {
+            System.out.println("账户或密码错误！");
             resp.sendRedirect("login.jsp");
         }
     }
