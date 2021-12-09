@@ -54,10 +54,34 @@ public class DBconnection {
         return resultSet;
     }
 
-    public static ResultSet selectDrugs() {
+    public static ResultSet selectAllDrugs() {
         try {
-            statement = connection.prepareStatement("select * from drugs where 1 = ?");
-            statement.setString(1,"1");
+            statement = connection.prepareStatement("select * from drugs");
+            resultSet = statement.executeQuery();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public static ResultSet selectDrugs(String info, int info_type) {
+        String sql_string = null;
+        try {
+            switch (info_type) {
+                case 1:
+                    sql_string = "select * from drugs where drug_id like ?";
+                    break;
+                case 2:
+                    sql_string = "select * from drugs where drug_name like ?";
+                    break;
+                case 3:
+                    sql_string = "select * from drugs where manufacturer like ?";
+                    break;
+            }
+            statement = connection.prepareStatement(sql_string);
+            String ssss = "%"+info+"%";
+            statement.setString(1,"%"+info+"%");
+
             resultSet = statement.executeQuery();
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();

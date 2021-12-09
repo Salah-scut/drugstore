@@ -1,4 +1,6 @@
-drop table employees;
+create database drugstore;
+use drugstore;
+
 create table employees
 (
 	employee_id varchar(9),
@@ -11,7 +13,6 @@ create table employees
 		primary key (employee_id)
 );
 
-drop table departments;
 create table departments
 (
     department_id int not null,
@@ -24,7 +25,6 @@ create table departments
         foreign key (manager_id) references employees(employee_id)
 );
 
-drop table drugs;
 create table drugs
 (
     drug_id varchar(30) not null ,

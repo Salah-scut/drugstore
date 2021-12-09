@@ -17,6 +17,7 @@
     <title>店长主页</title>
 </head>
 <body>
+<style>div{text-align: center}</style>
 <div>
     <h1>亲爱的<%=employee.getEmployee_name()%>店长，欢迎回来！</h1><hr>
     <a href="ShowDrugServlet?">查看药品信息</a><br>
