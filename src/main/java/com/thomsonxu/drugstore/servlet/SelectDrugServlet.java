@@ -37,6 +37,7 @@ public class SelectDrugServlet extends HttpServlet {
 
         req.setAttribute("allDrugList",list);
         req.setAttribute("employee_name",req.getParameter("employee_name"));
-        req.getRequestDispatcher("/showDrug.jsp").forward(req,resp);
+        String job_id = req.getParameter("job_id");
+        req.getRequestDispatcher(String.format("/showDrug%s.jsp",job_id)).forward(req,resp);
     }
 }

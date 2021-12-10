@@ -17,6 +17,14 @@ public class Employee {
         this.department_id = department_id;
     }
 
+    public Employee(String employee_id, String employee_name, String email, Integer job_id, Integer department_id) {
+        this.employee_id = employee_id;
+        this.employee_name = employee_name;
+        this.email = email;
+        this.job_id = job_id;
+        this.department_id = department_id;
+    }
+
     public String getEmployee_id() {
         return employee_id;
     }

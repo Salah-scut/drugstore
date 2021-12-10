@@ -54,6 +54,10 @@ public class DBconnection {
         return resultSet;
     }
 
+    /**
+     * 查询所有药品
+     * @return
+     */
     public static ResultSet selectAllDrugs() {
         try {
             statement = connection.prepareStatement("select * from drugs");
@@ -64,6 +68,12 @@ public class DBconnection {
         return resultSet;
     }
 
+    /**
+     * 根据输入信息查询药品
+     * @param info
+     * @param info_type
+     * @return
+     */
     public static ResultSet selectDrugs(String info, int info_type) {
         String sql_string = null;
         try {
@@ -87,5 +97,43 @@ public class DBconnection {
             sqlException.printStackTrace();
         }
         return resultSet;
+    }
+
+    /**
+     * 查询所有职工
+     * @return
+     */
+    public static ResultSet selectAllEmployees() {
+        try {
+            statement = connection.prepareStatement("select * from employees");
+            resultSet = statement.executeQuery();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    /**
+     * 查询所有门店
+     * @return
+     */
+    public static ResultSet selectAllDepartments() {
+        try {
+            statement = connection.prepareStatement("select * from department_manager");
+            resultSet = statement.executeQuery();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public static void deleteDrug(String drug_id) {
+        try {
+            statement = connection.prepareStatement("delete from drugs where drug_id = ?");
+            statement.setString(1,drug_id);
+            statement.executeUpdate();
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
     }
 }

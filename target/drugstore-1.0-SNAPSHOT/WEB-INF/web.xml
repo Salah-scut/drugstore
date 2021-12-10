@@ -28,6 +28,21 @@
         <servlet-class>com.thomsonxu.drugstore.servlet.SelectDrugServlet</servlet-class>
     </servlet>
 
+    <servlet><!--servlet类路径配置-->
+        <servlet-name>ShowEmployeeServlet</servlet-name>
+        <servlet-class>com.thomsonxu.drugstore.servlet.ShowEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet><!--servlet类路径配置-->
+        <servlet-name>ShowDepartmentServlet</servlet-name>
+        <servlet-class>com.thomsonxu.drugstore.servlet.ShowDepartmentServlet</servlet-class>
+    </servlet>
+
+    <servlet><!--servlet类路径配置-->
+        <servlet-name>DeleteDrugServlet</servlet-name>
+        <servlet-class>com.thomsonxu.drugstore.servlet.DeleteDrugServlet</servlet-class>
+    </servlet>
+
     <!-- -->
 
     <servlet-mapping><!--servlet类映射配置-->
@@ -45,6 +60,20 @@
         <url-pattern>/SelectDrugServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping><!--servlet类映射配置-->
+        <servlet-name>ShowEmployeeServlet</servlet-name>
+        <url-pattern>/ShowEmployeeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping><!--servlet类映射配置-->
+        <servlet-name>ShowDepartmentServlet</servlet-name>
+        <url-pattern>/ShowDepartmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping><!--servlet类映射配置-->
+        <servlet-name>DeleteDrugServlet</servlet-name>
+        <url-pattern>/DeleteDrugServlet</url-pattern>
+    </servlet-mapping>
 
     <welcome-file-list><!--默认首页地址-->
         <welcome-file>login.jsp</welcome-file>

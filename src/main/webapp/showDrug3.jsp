@@ -19,7 +19,7 @@
 <style>table{text-align: center}</style>
 <body>
     <div>
-        <h1>${requestScope.employee_name}店长的数据库</h1>
+        <h1>药品信息</h1>
         <a href="updateInfo.jsp?name=${requestScope.employee_name}&type=1">修改个人资料</a><br>
         <a href="login.jsp">返回登录</a><hr>
     </div>
@@ -33,6 +33,7 @@
     <div>
         生产厂家：<input type="text" name="manufacturer" value=""><br><br>
     </div>
+    <input type="hidden" name="job_id" value="3">
     <div>
     <input type="submit" value="查询" name="query">
         <br><br>
@@ -51,9 +52,6 @@
                 <td>${record.drug_name}</td>
                 <td>${record.manufacturer}</td>
                 <td>${record.price}</td>
-                <td>
-                    <a href="/email.jsp?teacher=${record.manufacturer}">发送邮件</a>
-                </td>
             </tr>
         </c:forEach>
     </table>

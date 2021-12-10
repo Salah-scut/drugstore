@@ -25,6 +25,7 @@ public class LoginServlet extends HttpServlet {
         if (employee != null) {
             req.setAttribute("employee",employee);
             req.setAttribute("employee_name",employee.getEmployee_name());
+            req.setAttribute("job_id",employee.getJob_id());
             // 重定向到对应职务的页面
             req.getRequestDispatcher(String.format("/main%d.jsp", employee.getJob_id())).forward(req,resp);
         } else {
